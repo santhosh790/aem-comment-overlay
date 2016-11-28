@@ -1,0 +1,37 @@
+{{!
+
+ ADOBE CONFIDENTIAL
+ __________________
+
+  Copyright 2015 Adobe Systems Incorporated
+  All Rights Reserved.
+
+ NOTICE:  All information contained herein is, and remains
+ the property of Adobe Systems Incorporated and its suppliers,
+ if any.  The intellectual and technical concepts contained
+ herein are proprietary to Adobe Systems Incorporated and its
+ suppliers and are protected by trade secret or copyright law.
+ Dissemination of this information or reproduction of this material
+ is strictly forbidden unless prior written permission is obtained
+ from Adobe Systems Incorporated.
+
+}}
+{{#equals this.verb "post"}}
+    {{i18n this.verb}} {{i18n "on"}}
+{{/equals}}
+{{#equals this.verb "add"}}
+    {{i18n this.verb}} {{i18n "to"}}
+{{/equals}}
+{{#equals this.verb "update"}}
+    {{i18n this.verb}}
+{{/equals}}
+{{#equals this.verb "delete"}}
+    {{i18n this.verb}}
+{{/equals}}
+
+
+<b>{{#if this.target.properties.useReferrer}}
+    <a href=" {{this.object.properties.url}}">{{this.target.displayName}}</a>
+{{else}}
+    <a href=" {{this.target.properties.url}}">{{this.target.displayName}}</a>
+{{/if}}</b>

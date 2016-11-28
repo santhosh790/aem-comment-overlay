@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Sort Settings">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <sortField
+            jcr:primaryType="cq:Widget"
+            fieldDescription="Set Sort Field"
+            fieldLabel="Sort Field"
+            name="./sortField"
+            optionsProvider="SCF.CommentSystem.prototype.getSortOrder"
+            type="select"
+            xtype="selection"/>
+        <sortOrder
+            jcr:primaryType="cq:Widget"
+            fieldDescription="Set Sort Order"
+            fieldLabel="Sort Order"
+            name="./sortFieldOrder"
+            type="select"
+            xtype="selection">
+            <options jcr:primaryType="cq:WidgetCollection">
+                <asc
+                    jcr:primaryType="nt:unstructured"
+                    text="Ascending"
+                    value="ASC"/>
+                <desc
+                    jcr:primaryType="nt:unstructured"
+                    text="Descending"
+                    value="DESC"/>
+            </options>
+        </sortOrder>
+    </items>
+</jcr:root>
